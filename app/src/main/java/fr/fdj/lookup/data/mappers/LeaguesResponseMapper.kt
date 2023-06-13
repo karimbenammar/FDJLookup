@@ -11,4 +11,4 @@ fun ApiLeague.toLeague() = League(
     nameAlt = nameAlt
 )
 
-fun LeaguesResponse.toLeaguesList() = items.map { it.toLeague() }
+fun LeaguesResponse.toLeaguesList() = leagues.map { it.toLeague() }

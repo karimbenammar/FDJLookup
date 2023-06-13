@@ -5,5 +5,5 @@ import fr.fdj.lookup.domain.util.Resource
 import fr.fdj.lookup.domain.model.Team
 
 interface TeamsRepository {
-    suspend fun getTeamsForLeague(league: String): Resource<List<Team>, Failure.NetworkError>
+    suspend fun getTeamsForLeague(leagueName: String): Resource<List<Team>, Failure.NetworkError>
 }
