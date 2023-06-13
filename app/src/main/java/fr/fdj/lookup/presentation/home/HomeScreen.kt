@@ -48,7 +48,13 @@ fun HomeScreen(
         }
 
         teamsState.teams?.let {
-            TeamsList(state = teamsState, teams = it)
+            if (it.isNotEmpty()) {
+                // Show the list of teams
+                TeamsList(state = teamsState, teams = it)
+            } else {
+                // Show a message when the list is empty
+                ErrorMessage(message = "No teams found")
+            }
         }
     }
 

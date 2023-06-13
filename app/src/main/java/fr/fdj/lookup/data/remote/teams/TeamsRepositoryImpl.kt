@@ -10,7 +10,7 @@ class TeamsRepositoryImpl(private val api: TeamsApi) : TeamsRepository {
 
     override suspend fun getTeamsForLeague(leagueName: String): Resource<List<Team>, Failure.NetworkError> {
         return try {
-            Resource.Success(api.getTeamsForLeague(leagueName).toTeamsList())
+            Resource.Success(api.getTeamsForLeague(leagueName).toTeamsList() ?: emptyList())
         } catch (e: Exception) {
             Resource.Error(Failure.NetworkError(e.message ?: "Unknown error"))
         }

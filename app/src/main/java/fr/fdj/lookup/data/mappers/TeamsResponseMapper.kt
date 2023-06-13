@@ -13,4 +13,4 @@ fun ApiTeam.toTeam() = Team(
     badgeUrl = badgeUrl
 )
 
-fun TeamsResponse.toTeamsList() = teams.map { it.toTeam() }
+fun TeamsResponse.toTeamsList() = teams?.map { it.toTeam() }
