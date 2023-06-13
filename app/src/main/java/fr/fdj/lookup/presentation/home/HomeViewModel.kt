@@ -28,11 +28,10 @@ class HomeViewModel
     val teamsState = _teamsState.asStateFlow()
 
     init {
-        //fetchTeamsForLeague("English Premier League")
         fetchLeagues()
     }
 
-    fun fetchLeagues() {
+    private fun fetchLeagues() {
         viewModelScope.launch {
             _leaguesState.update { it.copy(isLoading = true) }
 

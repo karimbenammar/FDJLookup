@@ -6,6 +6,8 @@ object Versions {
     const val hilt_compiler_version = "1.0.0"
     const val retrofit2_version = "2.9.0"
     const val landscapist_version = "2.2.1"
+    const val junit_version = "4.13.2"
+    const val mockito_version = "4.1.0"
 }
 
 object Libs {
@@ -29,4 +31,8 @@ object Libs {
     const val landscapist_glide = "com.github.skydoves:landscapist-glide:${Versions.landscapist_version}"
     const val landscapist_animation = "com.github.skydoves:landscapist-animation:${Versions.landscapist_version}"
     const val landscapist_placeholder = "com.github.skydoves:landscapist-placeholder:${Versions.landscapist_version}"
+
+    const val junit = "junit:junit:${Versions.junit_version}"
+    const val mockito = "org.mockito.kotlin:mockito-kotlin:${Versions.mockito_version}"
+    const val kotlin_coroutines_test = "org.jetbrains.kotlinx:kotlinx-coroutines-test"
 }
